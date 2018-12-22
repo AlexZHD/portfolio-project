@@ -52,12 +52,15 @@
 
 <main role="main">
     <div class="container">
-    <h1 class="text-center pt-3">Welcome to Alex' Blog</h1>
-    <br />
-    <br />
-    <h2>Latest Post</h2>
-    <hr />
-
+      <h1 class="text-center pt-3">Welcome to Alex' Blog</h1>
+      <br />
+      <br />
+      <h2>Latest Post</h2>
+      <hr />
+      {% for blog in blogs.all %}  
+      {{ blog.title }}
+      <br />
+      {% endfor %}
     </div>
 </main>
 
