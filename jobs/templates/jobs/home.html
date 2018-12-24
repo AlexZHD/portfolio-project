@@ -1,13 +1,14 @@
 
 <!doctype html>
 <html lang="en">
+{% load staticfiles %}  
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
-    <title>Album example · Bootstrap</title>
+    <meta name="author" content="">
+    <meta name="generator" content="">
+    <title>Alex Zmachynski</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -30,20 +31,20 @@
   <body>
   <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="#">♨︎ Alex Zmachynski</a>
+                <a class="navbar-brand" href="{% url 'home' %}">☕︎ Alex Zmachynski</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="#">LinkedIn</a>
+                      <a class="nav-link" href="http://linkedin.com/in/alex-zmachynski-555a7374">LinkedIn</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Resume</a>
+                      <a class="nav-link" href="{% static 'A_Zmachynski_Resume.docx' %}">Resume</a>
                     </li>                   
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Blog</a>
+                      <a class="nav-link" href=" {% url 'allblogs' %} ">Blog</a>
                     </li>                   
                   </ul>
                 </div>
@@ -59,6 +60,7 @@
       <p>
         <a href="mailto:azmachynski@gmail.com" class="btn btn-primary my-2">Email me</a>
       </p>
+      <img src={% static 'AlexZ_main.jpg' %} height=200/>
     </div>
   </section>
 
