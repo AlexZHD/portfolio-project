@@ -32,23 +32,17 @@
   <body>
   <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="{% url 'home' %}"><i class="fas fa-mug-hot" style="font-size: 0.8rem;"></i> Alex Zmachynski</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                      <a class="nav-link" href="http://linkedin.com/in/alex-zmachynski-555a7374">LinkedIn</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="{% static 'A_Zmachynski_Resume.pdf' %}">Resume</a>
-                    </li>                   
-                    <li class="nav-item">
-                      <a class="nav-link" href=" {% url 'allblogs' %} ">Blog</a>
-                    </li>                   
-                  </ul>
-                </div>
+          <a class="navbar-brand" href="{% url 'home' %}"><i class="fas fa-mug-hot" style="font-size: 0.8rem;"></i> Alex Zmachynski</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+              <a class="nav-link" href="http://linkedin.com/in/alex-zmachynski-555a7374">LinkedIn</a>
+              <a class="nav-link" href="{% static 'A_Zmachynski_Resume.pdf' %}">Resume</a>
+              <a class="nav-link" href=" {% url 'allblogs' %} ">Blog</a>
+            </div>
+          </div>
         </nav>
   </header>
 
