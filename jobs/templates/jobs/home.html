@@ -48,12 +48,12 @@
 
 <main role="main">
 
-  <section class="jumbotron text-center">
+  <section class="jumbotron text-center" style="border:#ced6df solid 1px">
     <div class="container">
       <h1 class="jumbotron-heading">Hi, I'm Alex.</h1>
       <p class="lead text-muted">Hi, I'm Alex. C, C++, C# programmer by day ☀︎, Python & Django programmer by night ☾.</p>
       <p>
-        <a href="mailto:azmachynski@gmail.com" class="btn btn-primary my-2">Email me</a>
+        <a href="mailto:azmachynski@gmail.com" class="btn btn-primary my-2" style="background-color:#376492; " >Email me</a>
       </p>
       <img src={% static 'AlexZ_main.jpg' %} height=200/>
     </div>
@@ -62,7 +62,7 @@
   <div class="album py-5 bg-light">
     <div class="container">
 
-      <div class="row">
+      <!-- <div class="row">
         {% for job in jobs.all %}  
         <div class="col-md-4">
           <div class="card mb-4 box-shadow">
@@ -73,7 +73,27 @@
           </div>
         </div>
         {% endfor %}
-       </div>
+      </div> -->
+      <div class="row">
+        {% for job in jobs.all %}  
+
+        <!-- <div class="col-lg-4 col-sm-6">
+          <div class="thumbnail">
+            <img src="http://i.imgur.com/qK42fUu.jpg">
+          </div>
+        </div> -->
+
+        <div class="col-lg-4 col-sm-6">
+          <div class="thumbnail mb-4">
+            <img class="card-img-top" src="{{ job.image.url }}"/>
+            <div class="card-body">
+              <p class="card-text">{{ job.summary }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
     </div>
   </div>
 
